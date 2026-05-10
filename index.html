@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>அம்மா – என் உலகம் | Amma Tribute</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="petals-bg" id="petalsBg"></div>
+  <div class="hero-title">அம்மா</div>
+  <div class="hero-sub">என் உலகம் &bull; My Whole World</div>
+  <div class="scroll-hint">↓ scroll to celebrate ↓</div>
+</div>
+
+<div class="stripe"></div>
+
+<!-- ════════════════════════════════════════════════
+     STICKY VOICE PLAYER
+════════════════════════════════════════════════ -->
+<div class="voice-bar">
+  <button class="voice-btn" id="voiceBtn" title="Read aloud in Tamil female voice">▶</button>
+  <div class="voice-label" id="voiceLabel">
+    <span class="speaking-dot" id="speakDot" style="display:none"></span>
+    Tamil female voice &ndash; அம்மாவிற்கு அன்பு கடிதம்
+  </div>
+  <div class="voice-progress">
+    <div class="voice-fill" id="voiceFill"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PHOTO GALLERY  (5 photos + Spotify)
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">📸 அன்பின் தருணங்கள்</div>
+  <div class="section-divider">🌸 ❤️ 🌸</div>
+
+  <div class="gallery">
+
+    <!-- 1. Temple visit selfie (3-person) — wide -->
+    <div class="photo-card wide" onclick="openLightbox(this)">
+      <img src="images\img 1.jpeg" alt="கோயில் – மூவரும் சேர்ந்து" loading="lazy">
+      <div class="photo-caption">கோயில் வழிபாட்டில் ஒன்றாக 🙏 &nbsp;|&nbsp; 2026 Jan 16</div>
+    </div>
+
+    <!-- 2. Amma with white cat -->
+    <div class="photo-card" onclick="openLightbox(this)">
+      <img src="images\img 2.jpeg" alt="அம்மா வெள்ளை பூனையோடு" loading="lazy">
+      <div class="photo-caption">அம்மாவின் அன்பு – எல்லா உயிர்களுக்கும் 🐾</div>
+    </div>
+
+    <!-- 3. Beach selfie (3-person) -->
+    <div class="photo-card" onclick="openLightbox(this)">
+      <img src="images\img 4.jpeg" alt="கடல் திருவிழா selfie" loading="lazy">
+      <div class="photo-caption">கடல் அலைகளில் அன்பான தருணங்கள் 🌊</div>
+    </div>
+
+    <!-- 4. Silk saree function (2-person) -->
+    <div class="photo-card" onclick="openLightbox(this)">
+      <img src="images\img 5.jpeg" alt="பட்டு புடவையில் தாய்-மகள்" loading="lazy">
+      <div class="photo-caption">பட்டு புடவையில் அழகான தாய்-மகள் 💛</div>
+    </div>
+
+    <!-- 5. New — temple market selfie (868.jpg) -->
+    <div class="photo-card" onclick="openLightbox(this)">
+      <img src="images\img 6.jpeg" alt="கோயில் சந்தையில் அம்மாவும் மகளும்" loading="lazy">
+      <div class="photo-caption">அம்மாவோடு கோயில் சந்தையில் 🌺</div>
+    </div>
+
+  </div>
+
+  <!-- ── Spotify Song Player ── -->
+  <div class="spotify-wrap">
+    <div class="spotify-label">
+      <span>🎵</span>
+      அம்மாவிற்காக ஒரு பாடல் – Spotify
+    </div>
+    <iframe
+      class="spotify-iframe"
+      src="https://open.spotify.com/embed/track/6UPBzhMbTafgwsW7cuOXBy?utm_source=generator&theme=0"
+      width="100%"
+      height="152"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<div class="stripe"></div>
+
+<!-- ════════════════════════════════════════════════
+     TAMIL POETRY
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">📜 தமிழ் கவிதைகள்</div>
+  <div class="section-divider">❦ ❦ ❦</div>
+
+  <div class="poetry-bg" onclick="readPoem(0)">
+    <div class="poem-tamil">
+      அன்னையின் கண்களில் காண்கிறேன் உலகை,<br>
+      அவள் புன்னகையில் மலர்கிறது வாழ்க்கை;<br>
+      பத்து மாதம் சுமந்தாள் என் நிறையை,<br>
+      பல்லாண்டும் சுமப்பாள் என் வாழ்க்கையை.
+    </div>
+    <div class="poem-meaning">In my mother's eyes I see the world; in her smile life blossoms. She carried my weight for ten months, and will carry my life for many more years.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+  <div class="poetry-bg" onclick="readPoem(1)">
+    <div class="poem-tamil">
+      தாயின் கைகள் – வெண்மையான தாமரை,<br>
+      தளர்ந்த போதும் தாங்கும் என்னை;<br>
+      அலைகடல் போல் அன்பு பொழியும்,<br>
+      அவள் ஒரு தெய்வம் – என் வீட்டில் வாழும்.
+    </div>
+    <div class="poem-meaning">A mother's hands – white as lotus petals, even when weary they hold me. Her love pours like ocean waves; she is a goddess who lives in my home.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+  <div class="poetry-bg" onclick="readPoem(2)">
+    <div class="poem-tamil">
+      நெஞ்சில் தாயின் படம் வைத்திருப்பேன்,<br>
+      நினைத்தாலே நெகிழ்ந்துவிடுவேன்;<br>
+      அவள் சொன்ன வார்த்தைகள் தாலாட்டு,<br>
+      அது இன்னும் என் காதில் ஒலிக்கும்.
+    </div>
+    <div class="poem-meaning">I hold her picture in my heart; thinking of her melts me. The words she spoke are like a lullaby — they still echo in my ears.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+  <div class="poetry-bg" onclick="readPoem(3)">
+    <div class="poem-tamil">
+      குழந்தையாய் இருந்தேன் – தூக்கி வைத்தாள்,<br>
+      கண்ணீரில் துடைத்து ஆறுதல் சொன்னாள்;<br>
+      வளர்ந்தாலும் அவள் கண்ணில் நான் குழந்தை,<br>
+      வாழ்க்கை முழுக்க அம்மா என் கோட்டை.
+    </div>
+    <div class="poem-meaning">When I was a baby she lifted me; she wiped my tears and gave comfort. Even as I grow, in her eyes I am forever a child — all through life, Amma is my fortress.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+  <div class="poetry-bg" onclick="readPoem(4)">
+    <div class="poem-tamil">
+      ஆயிரம் சொல்லால் போற்றிடுவேன் அம்மாவை,<br>
+      அன்பின் கடவுளே – நீ என் ஜீவனே;<br>
+      சொர்க்கமும் வேண்டாம் வைகுந்தமும் வேண்டாம்,<br>
+      உன் நிழலில் வாழ்வது பேரின்பம் ஆமே.
+    </div>
+    <div class="poem-meaning">I will praise Amma with a thousand words — goddess of love, you are my very breath. I need neither heaven nor paradise; living in your shadow is the greatest bliss.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+  <div class="poetry-bg" onclick="readPoem(5)">
+    <div class="poem-tamil">
+      திருக்குறள் சொல்கிறது – "தாயின் மடியே<br>
+      பிள்ளைக்கு முதல் பள்ளி" என்று;<br>
+      அந்த பள்ளி கிட்டியது எனக்கு,<br>
+      அன்னையே – நன்றி உன் அன்புக்கு.
+    </div>
+    <div class="poem-meaning">Thirukkural says — "A mother's lap is the child's first school." I was blessed with that school. Amma — thank you for your love.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+  <div class="poetry-bg" onclick="readPoem(6)">
+    <div class="poem-tamil">
+      மழை பெய்யும் போது குடை பிடித்தாள்,<br>
+      மனம் வலிக்கும் போது மருந்தாய் நின்றாள்;<br>
+      இரவு தூங்காமல் காத்திருந்தாள்,<br>
+      என் வாழ்வின் விடியல் – என் அம்மா.
+    </div>
+    <div class="poem-meaning">She held an umbrella when it rained; she was medicine when my heart ached. She stayed awake through nights watching over me — my Amma is the dawn of my life.</div>
+    <button class="poem-read-btn">🔊 கேட்கவும்</button>
+  </div>
+
+</div>
+
+<div class="stripe"></div>
+
+<!-- ════════════════════════════════════════════════
+     ANIMATION STAGE
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">🎬 தாய்-மகள் வாழ்க்கை</div>
+  <div class="section-divider">🌺 🌺 🌺</div>
+
+  <div class="anim-stage">
+    <div class="anim-nav">
+      <button class="anim-tab active" onclick="showScene('birth')">🍼 பிறப்பு</button>
+      <button class="anim-tab" onclick="showScene('love')">💕 அன்பு</button>
+      <button class="anim-tab" onclick="showScene('fight')">😤 சண்டை</button>
+      <button class="anim-tab" onclick="showScene('gossip')">🗣 கதை</button>
+      <button class="anim-tab" onclick="showScene('care')">🤱 பராமரிப்பு</button>
+      <button class="anim-tab" onclick="showScene('teen')">🌸 வளர்ச்சி</button>
+      <button class="anim-tab" onclick="showScene('dance')">💃 கொண்டாட்டம்</button>
+      <button class="anim-tab" onclick="showScene('temple')">🛕 கோயில்</button>
+      <button class="anim-tab" onclick="showScene('beach')">🌊 கடல்</button>
+    </div>
+    <div class="anim-canvas" id="animCanvas"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     LIFE TIMELINE
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">🌱 வளர்ச்சியின் பயணம்</div>
+  <div class="section-divider">❦ ❦ ❦</div>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">🍼 பிறந்த நேரம்</div>
+      <div class="tl-body">அம்மாவின் முதல் கண்ணீர் சந்தோஷமானது. குழந்தையின் முதல் அழுகை — உலகின் இனிமையான இசை.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">👶 ஒரு வயது</div>
+      <div class="tl-body">முதல் அடி எடுத்து வைத்தேன். அம்மா கை நீட்டி பிடித்தாள் — விழாமல் காத்தாள்.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">🏫 பள்ளி நாட்கள்</div>
+      <div class="tl-body">அம்மா கட்டிய ட்ரெஸ், அம்மா தீட்டிய தலைவாரல், அம்மா கொடுத்த டிபன் — எல்லாமே அன்பு.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">🛕 கோயில் யாத்திரை</div>
+      <div class="tl-body">சேர்ந்து கோயிலுக்கு சென்றோம். இறைவனின் ஆசியோடு திரும்பினோம் — அம்மாவின் கைப்பிடிப்போடு.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">😤 சண்டை நேரங்கள்</div>
+      <div class="tl-body">கோபப்பட்டோம், அழுதோம் — ஆனால் மறுகணமே அம்மா அணைத்துக்கொண்டாள். அன்பு அழியவில்லை.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">🌊 கடல் திருவிழா</div>
+      <div class="tl-body">கடல் நீரில் நனைந்து மகிழ்ந்தோம். அம்மாவோடு எல்லா தருணமும் சிறப்பானது.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">🌸 இளமை காலம்</div>
+      <div class="tl-body">கனவுகள் பேசினோம், கதை சொன்னோம், இரவு வரை கொண்டாடினோம். அம்மா என் சிறந்த தோழி.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-title">💛 இன்று</div>
+      <div class="tl-body">அம்மா இருக்கும் வரை வாழ்க்கை முழுமையானது. அன்பு மாறாது — என்றும் என்றும்.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     FINALE
+════════════════════════════════════════════════ -->
+<div class="finale" id="finale">
+  <div id="sparkles"></div>
+  <div class="finale-title">அம்மா, நன்றி! 💛</div>
+  <div class="finale-body">
+    உன் அன்பே என் ஆதாரம்,<br>
+    உன் ஆசியே என் வாழ்க்கையின் வழிகாட்டி.<br>
+    நீ இருக்கும் வரை நான் பாதுகாப்பாக இருக்கிறேன்,<br>
+    உன்னை நேசிக்கிறேன் – என்றும் என்றும்.<br><br>
+    <em style="color:#c8972a;font-size:1.4em">❤️ அம்மாவிற்கு அன்பு ❤️</em>
+  </div>
+</div>
+
+<div class="stripe"></div>
+
+<!-- ════════════════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lbImg" src="" alt="Photo enlarged">
+</div>
+
+<!-- ════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════ -->
+<script src="main.js"></script>
+
+</body>
+</html>
